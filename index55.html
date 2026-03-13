@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Website</title>
+
+    <style>
+        body{
+            background-color: #e6f2ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        img{
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        ul{
+            list-style-type: square;
+            text-align: left;
+            display: inline-block;
+        }
+
+        button{
+            padding: 10px;
+            margin: 5px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>เว็บไซต์แนะนำการเรียนรู้เทคโนโลยีเว็บ</h1>
+
+    <img src="https://via.placeholder.com/300" alt="Web Technology">
+
+    <p>
+        เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำพื้นฐานเกี่ยวกับการพัฒนาเว็บไซต์
+        เช่น HTML CSS และ JavaScript
+    </p>
+
+    <h2>หัวข้อที่น่าสนใจ</h2>
+    <ul>
+        <li>HTML พื้นฐาน</li>
+        <li>การตกแต่งด้วย CSS</li>
+        <li>การเขียน JavaScript</li>
+    </ul>
+
+    <p>
+        ศึกษาเพิ่มเติมได้ที่
+        <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+    </p>
+
+    <hr>
+
+    <h2>ทดลอง JavaScript</h2>
+
+    <!-- ปุ่มแสดงข้อความ -->
+    <button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
+
+    <br><br>
+
+    <!-- input รับชื่อ -->
+    <input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+
+    <button onclick="sayHello()">ทักทาย</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function showWelcome(){
+            alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
+        }
+
+        function sayHello(){
+            let name = document.getElementById("username").value;
+
+            document.getElementById("result").innerHTML =
+            "สวัสดี " + name + " ยินดีต้อนรับ";
+        }
+
+    </script>
+
+</body>
+</html>
