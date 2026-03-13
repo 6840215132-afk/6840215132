@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เว็บไซต์ของฉัน</title>
+
+<style>
+body{
+    background-color: #e8f4ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: #2c3e50;
+}
+
+img{
+    width: 300px;
+    border-radius: 10px;
+}
+
+ul{
+    list-style-type: square;
+    display: inline-block;
+    text-align: left;
+}
+
+button{
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #2980b9;
+}
+
+#result{
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h1>
+
+<img src="https://picsum.photos/300" alt="ตัวอย่างรูปภาพ">
+
+<p>เว็บไซต์นี้เป็นตัวอย่างการสร้างเว็บด้วย HTML CSS และ JavaScript เบื้องต้น</p>
+
+<h3>สิ่งที่ฉันสนใจ</h3>
+
+<ul>
+<li>การพัฒนาเว็บไซต์</li>
+<li>เทคโนโลยีดิจิทัล</li>
+<li>การเขียนโปรแกรม</li>
+</ul>
+
+<p>
+เยี่ยมชมเว็บไซต์เพิ่มเติมได้ที่  
+<a href="https://www.github.com" target="_blank">GitHub</a>
+</p>
+
+<br><br>
+
+<button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
+
+<br><br>
+
+<input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+<button onclick="sayHello()">ทักทาย</button>
+
+<p id="result"></p>
+
+<script>
+
+function showWelcome(){
+    alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
+}
+
+function sayHello(){
+    let name = document.getElementById("username").value;
+    document.getElementById("result").innerText =
+    "สวัสดี " + name + " ยินดีต้อนรับ";
+}
+
+</script>
+
+</body>
+</html>
