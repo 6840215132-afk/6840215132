@@ -1,98 +1,89 @@
 <!DOCTYPE html>
-<html lang="th">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>เว็บไซต์ของฉัน</title>
+    <title>เว็บไซต์ของฉัน</title>
+    <style>
+        body {
+            background-color: #e6f2ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-<style>
-body{
-    background-color: #e8f4ff;
-    font-family: Arial, sans-serif;
-    text-align: center;
+        h1 {
+            color: #003366;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            text-align: left;
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+
+<script>
+function showWelcome() {
+    alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
 }
 
-h1{
-    color: #2c3e50;
+function greetUser() {
+    var name = document.getElementById("username").value;
+    document.getElementById("result").innerHTML =
+        "สวัสดี " + name + " ยินดีต้อนรับ";
 }
-
-img{
-    width: 300px;
-    border-radius: 10px;
-}
-
-ul{
-    list-style-type: square;
-    display: inline-block;
-    text-align: left;
-}
-
-button{
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: #2980b9;
-}
-
-#result{
-    margin-top: 10px;
-    font-weight: bold;
-    color: green;
-}
-</style>
+</script>
 
 </head>
 
 <body>
 
-<h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h1>
+<h1>เว็บไซต์เกี่ยวกับเทคโนโลยีเว็บ</h1>
 
-<img src="https://picsum.photos/300" alt="ตัวอย่างรูปภาพ">
+<img src="https://picsum.photos/300" alt="รูปตัวอย่าง">
 
-<p>เว็บไซต์นี้เป็นตัวอย่างการสร้างเว็บด้วย HTML CSS และ JavaScript เบื้องต้น</p>
+<p>
+เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำพื้นฐานเกี่ยวกับการสร้างเว็บไซต์
+ด้วย HTML CSS และ JavaScript
+</p>
 
-<h3>สิ่งที่ฉันสนใจ</h3>
+<h3>หัวข้อที่น่าสนใจ</h3>
 
 <ul>
-<li>การพัฒนาเว็บไซต์</li>
-<li>เทคโนโลยีดิจิทัล</li>
-<li>การเขียนโปรแกรม</li>
+<li>HTML โครงสร้างเว็บไซต์</li>
+<li>CSS การตกแต่งเว็บไซต์</li>
+<li>JavaScript เพิ่มการโต้ตอบ</li>
 </ul>
 
 <p>
-เยี่ยมชมเว็บไซต์เพิ่มเติมได้ที่  
-<a href="https://www.github.com" target="_blank">GitHub</a>
+เยี่ยมชมเว็บไซต์เพิ่มเติม:
+<a href="https://www.w3schools.com" target="_blank">
+W3Schools
+</a>
 </p>
 
-<br><br>
+<br>
 
 <button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
 
 <br><br>
 
 <input type="text" id="username" placeholder="กรอกชื่อของคุณ">
-<button onclick="sayHello()">ทักทาย</button>
+<button onclick="greetUser()">ทักทาย</button>
 
 <p id="result"></p>
-
-<script>
-
-function showWelcome(){
-    alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
-}
-
-function sayHello(){
-    let name = document.getElementById("username").value;
-    document.getElementById("result").innerText =
-    "สวัสดี " + name + " ยินดีต้อนรับ";
-}
-
-</script>
 
 </body>
 </html>
